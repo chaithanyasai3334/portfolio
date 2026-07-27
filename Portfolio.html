@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Portfolio | Nagisetty Chaitanyasai</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#222;
+}
+
+section{
+padding:90px 10%;
+scroll-margin-top:90px;
+}
+
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 10%;
+
+background:#ffffff;
+
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#d90429;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+nav ul li{
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:500;
+
+color:#222;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#d90429;
+
+}
+
+nav ul li a.active{
+
+color:#d90429;
+
+}
+
+
+header{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 10%;
+
+background:#ffffff;
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+margin-bottom:15px;
+
+}
+
+.hero h3{
+
+font-size:28px;
+
+font-weight:500;
+
+color:#d90429;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:15px 38px;
+
+background:#d90429;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#222;
+
+}
+
+
+.title{
+
+font-size:45px;
+
+text-align:center;
+
+margin-bottom:60px;
+
+color:#111;
+
+}
+
+.title span{
+
+color:#d90429;
+
+}
+
+
+.about-container{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about-text p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+.about-box{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.education-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+border-left:6px solid #d90429;
+
+}
+
+.education-card h2{
+
+color:#d90429;
+
+margin-bottom:12px;
+
+}
+
+.education-card h4{
+
+margin-bottom:10px;
+
+}
+
+.education-card p{
+
+color:#555;
+
+line-height:1.8;
+
+}
+
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.skill-card{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.skill-card h2{
+
+color:#d90429;
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.skill-card p{
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+
+.projects{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.project-card{
+
+background:#ffffff;
+
+padding:20px;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.project-card img{
+
+width:100%;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+}
+
+.project-card h2{
+
+color:#d90429;
+
+margin-bottom:15px;
+
+}
+
+.project-card p{
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+
+.contact-box{
+
+max-width:700px;
+
+margin:auto;
+
+background:#fff;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-box h2{
+
+color:#d90429;
+
+margin-bottom:20px;
+
+}
+
+.contact-box p{
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+.contact-box a{
+
+display:inline-block;
+
+margin-top:10px;
+
+color:#d90429;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+
+footer{
+
+background:#d90429;
+
+color:#fff;
+
+padding:30px;
+
+text-align:center;
+
+margin-top:80px;
+
+}
+
+footer p{
+
+margin:8px 0;
+
+}
+
+
+.timeline{
+
+position:relative;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:18px;
+
+top:0;
+
+width:3px;
+
+height:100%;
+
+background:#d90429;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+padding-left:70px;
+
+margin-bottom:40px;
+
+}
+
+.timeline-dot{
+
+position:absolute;
+
+left:8px;
+
+top:30px;
+
+width:22px;
+
+height:22px;
+
+border-radius:50%;
+
+background:#d90429;
+
+border:4px solid #fff;
+
+}
+
+.experience-card{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.experience-header{
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+.experience-header h2{
+
+color:#d90429;
+
+}
+
+.experience-header h4{
+
+color:#555;
+
+margin-top:5px;
+
+}
+
+.experience-date{
+
+background:#ffe5e5;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+color:#d90429;
+
+font-weight:600;
+
+}
+
+.experience-card ul{
+
+padding-left:20px;
+
+}
+
+.experience-card li{
+
+margin-bottom:10px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 5%;
+
+}
+
+nav ul{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:22px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline-item{
+
+padding-left:45px;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Portfolio
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header id="home">
+
+<div class="hero">
+
+<h1>Nagisetty Chaitanyasai</h1>
+
+<h3>
+UI Designer | Web Developer | Python Developer
+</h3>
+
+<p>
+
+Passionate about creating modern user interfaces, responsive websites,
+Python applications and AI-powered workflows. I enjoy solving real-world
+problems through design, development and creativity.
+
+</p>
+
+<a href="resume/chaitanyasai.pdf.pdf" class="btn" download>
+    Download Resume
+</a>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h1 class="title">
+About <span>Me</span>
+</h1>
+
+<div class="about-container">
+
+<div class="about-text">
+
+<p>
+I'm a passionate UI Designer, Web Developer and Python Developer with a strong interest in building modern digital products. I enjoy transforming ideas into user-friendly interfaces and responsive web applications.
+</p>
+
+<p>
+Along with software development, I actively use AI tools and Prompt Engineering to improve productivity, automate workflows and create innovative solutions.
+</p>
+
+<p>
+My long-term vision is to become a Writer and Film Director while continuing to build my technical skills through real-world projects.
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h2>Quick Information</h2>
+
+<br>
+
+<p><strong>Name :</strong> Nagisetty Chaitanyasai</p>
+
+<br>
+
+<p><strong>Role :</strong> UI Designer | Web Developer | Python Developer</p>
+
+<br>
+
+<p><strong>Location :</strong> Andhra Pradesh, India</p>
+
+<br>
+
+<p><strong>Languages :</strong> English, Telugu</p>
+
+<br>
+
+<p><strong>Career Goal :</strong> Software Professional and UI designer</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h1 class="title">
+Education
+</h1>
+
+<div class="education-card">
+
+<h2>Bachelor of Technology (B.Tech)</h2>
+
+<h4>Computer Science & Engineering</h4>
+
+<p>
+
+Completed Bachelor's Degree in Computer Science Engineering with knowledge in programming, software development, databases, web technologies and artificial intelligence concepts.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="skills">
+
+<h1 class="title">
+Technical <span>Skills</span>
+</h1>
+
+<div class="skills">
+
+<div class="skill-card">
+
+<h2>🎨 UI Design</h2>
+
+<p>
+
+Figma<br>
+Wireframing<br>
+Prototyping<br>
+Responsive UI<br>
+User Flow<br>
+Design Systems
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>💻 Web Development</h2>
+
+<p>
+
+HTML5<br>
+CSS3<br>
+JavaScript<br>
+Responsive Websites<br>
+Portfolio Development
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>🐍 Python</h2>
+
+<p>
+
+Python Programming<br>
+
+Automation<br>
+
+Object Detection<br>
+
+YOLO Integration<br>
+
+Problem Solving
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>🤖 AI Tools</h2>
+
+<p>
+
+ChatGPT<br>
+
+Claude AI<br>
+
+Gemini AI<br>
+
+Perplexity AI<br>
+
+Canva AI<br>
+
+GitHub Copilot
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>🧠 Prompt Engineering</h2>
+
+<p>
+
+Prompt Writing<br>
+
+Workflow Automation<br>
+
+AI Content Creation<br>
+
+Prompt Optimization
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>🚀 Soft Skills</h2>
+
+<p>
+
+Leadership<br>
+
+Communication<br>
+
+Problem Solving<br>
+
+Creativity<br>
+
+Critical Thinking
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h1 class="title">
+Work <span>Experience</span>
+</h1>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="experience-card">
+
+<div class="experience-header">
+
+<div>
+
+<h2>Web Developer Intern</h2>
+
+<h4>CoderHub Expert</h4>
+
+</div>
+
+<span class="experience-date">
+May 2022 – June 2022
+</span>
+
+</div>
+
+<ul>
+
+<li>Learned HTML, CSS and JavaScript for frontend development.</li>
+
+<li>Developed Tic-Tac-Toe and Candy Crush style web games.</li>
+
+<li>Built a simple chatbot using JavaScript.</li>
+
+<li>Gained practical knowledge of responsive web design.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="experience-card">
+
+<div class="experience-header">
+
+<div>
+
+<h2>Project Intern</h2>
+
+<h4>College Academic Project</h4>
+
+</div>
+
+<span class="experience-date">
+Mar 2024 – Jun 2024
+</span>
+
+</div>
+
+<ul>
+
+<li>Developed an Object Detection System using Python and YOLO.</li>
+
+<li>Worked on real-time object detection techniques.</li>
+
+<li>Explored applications in healthcare, traffic monitoring and CCTV.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="experience-card">
+
+<div class="experience-header">
+
+<div>
+
+<h2>UI Designer</h2>
+
+<h4>Independent Projects</h4>
+
+</div>
+
+<span class="experience-date">
+Oct 2025 – Present
+</span>
+
+</div>
+
+<ul>
+
+<li>Designed Tourism, Healthcare and E-Commerce mobile applications.</li>
+
+<li>Created user-friendly interfaces using Figma.</li>
+
+<li>Focused on modern UI/UX principles and responsive layouts.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h1 class="title">
+My <span>Projects</span>
+</h1>
+
+<div class="projects">
+
+<div class="project-card">
+
+
+<h2>Tourist Mobile Application</h2>
+
+<p>
+
+Designed a modern tourism application in Figma with destination discovery,
+trip planning, hotel booking, and clean user experience.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+
+<h2>Healthcare Suggestion App</h2>
+
+<p>
+
+Designed a healthcare application that helps users receive medical
+suggestions through an intuitive and responsive interface.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+
+<h2>E-Commerce Clothing App</h2>
+
+<p>
+
+Created a modern clothing shopping UI with product catalog,
+cart system, offers and responsive mobile layouts.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+
+<h2>Object Detection using YOLO</h2>
+
+<p>
+
+Developed an Object Detection system using Python and YOLO
+for real-time object recognition.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+
+<h2>Netflix Login UI</h2>
+
+<p>
+
+Redesigned the Netflix login screen using modern UI principles
+and responsive layouts.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+
+<h2>Developer Portfolio</h2>
+
+<p>
+
+Developed this responsive portfolio website using
+HTML, CSS and JavaScript.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h1 class="title">
+Contact <span>Me</span>
+</h1>
+
+<div class="contact-box">
+
+<h2>Let's Connect</h2>
+
+<p>
+
+I'm actively looking for opportunities in
+
+UI Design,
+Frontend Development,
+Python Development,
+AI & Prompt Engineering.
+
+</p>
+
+<br>
+
+<p>
+
+📧 Email :
+<br>
+chaitanyasai.nagisetty@gmail.com
+
+</p>
+
+<br>
+
+<p>
+
+📱 Phone :
+<br>
++91 8106996587
+
+</p>
+
+<br>
+
+<p>
+
+💼 LinkedIn
+
+</p>
+
+<a href="https://www.linkedin.com/in/nagisetty-chaitanya-sai-378a6a23b/" target="_blank">
+
+Visit Profile
+
+</a>
+
+<br><br>
+
+<p>
+
+💻 GitHub
+
+</p>
+
+<a href="https://github.com/chaithanyasai3334" target="_blank">
+
+View Projects
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Nagisetty Chaitanyasai
+
+</p>
+
+<p>
+
+Designed & Developed with ❤️
+
+</p>
+
+</footer>
+
+<script>
+
+const sections=document.querySelectorAll("section,header");
+
+const navLinks=document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+if(window.pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
